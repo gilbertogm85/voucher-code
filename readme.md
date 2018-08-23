@@ -11,6 +11,8 @@
 
 - Enter project folder and run `vendor/bin/phpunit`
 
+**Note:** *Using sample@gmail.com as a not unique e-mail address (needs to be created before to simulate tests).*
+
 ## Test Directions:
 
 Live Demo at http://vouchercode.ml
@@ -41,8 +43,7 @@ Live Demo at http://vouchercode.ml
 #### Vouchers
   - You can set a voucher as used by acessing: http://vouchercode.ml/api/json/confirm-voucher/[voucher_code]/[email]/[date] replacing the parameters and brackets to reasonable data.
 
-  **Note:** *Date is optional and if no data is informed it's going to use today's date.*
-  First time is accessed it's going to return valid or invalid and some other relevant information, after the voucher is marked as used, status is going to be replaced to "Already been used".
+  **Note:** *Date is optional and if no data is informed it's going to use today's date. First time is accessed it's going to return valid or invalid and some other relevant information, after the voucher is marked as used, status is going to be replaced to "Already been used".*
 
   - You can access all the valid vouchers of an specific recipient accessing: http://vouchercode.ml/api/json/vouchers/[email] replacing the parameters and brackets to reasonable data.
 
