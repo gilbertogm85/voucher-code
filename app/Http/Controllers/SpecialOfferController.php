@@ -53,16 +53,18 @@ class SpecialOfferController extends Controller
 
         $rules = array(
             'name'  => 'required',
-            'expiry_date' => 'required|date',
-            'discount' => 'required|numeric:5,2'
+            'expiry_date' => 'required|date|after:yesterday',
+            'discount' => 'required|numeric:5,2|between:1,100'
         );
         
         $messages = array(
             'nome.required' => 'Name is required.',
             'expiry_date.required' => 'Expiry date is required.',
             'expiry_date.date' => 'Expiry date is not valid.',
+            'expiry_date.after' => 'Expiry date must be in the future or today.',
             'discount.numeric' => 'Must be a numeric value.',
-            'discount.required' => 'Discount is required.'
+            'discount.required' => 'Discount is required.',
+            'discount.between' => 'Discount mus be between 1 and 100'
         );   
 
         $validator = Validator::make($input, $rules, $messages);
@@ -87,15 +89,17 @@ class SpecialOfferController extends Controller
         $rules = array(
             'name'  => 'required',
             'expiry_date' => 'required|date|after:yesterday',
-            'discount' => 'required|numeric:5,2'
+            'discount' => 'required|numeric:5,2|between:1,100'
         );
         
         $messages = array(
             'nome.required' => 'Name is required.',
             'expiry_date.required' => 'Expiry date is required.',
             'expiry_date.date' => 'Expiry date is not valid.',
+            'expiry_date.after' => 'Expiry date must be in the future or today.',
             'discount.numeric' => 'Must be a numeric value.',
-            'discount.required' => 'Discount is required.'
+            'discount.required' => 'Discount is required.',
+            'discount.between' => 'Discount mus be between 1 and 100'
         );  
 
         $validator = Validator::make($input, $rules, $messages);

@@ -55,7 +55,7 @@
                             <label for="discount" class="col-md-4 col-form-label text-md-right">{{ __('Discount') }}</label>
 
                             <div class="col-md-6">
-                                <input id="discount" type="number" min='0' max="100" step="any" class="form-control{{ $errors->has('discount') ? ' is-invalid' : '' }}" name="discount" value="{{ old('discount') }}" required>
+                                <input id="discount" type="number" min='1' max="100" step="any" class="form-control{{ $errors->has('discount') ? ' is-invalid' : '' }}" name="discount" value="{{ old('discount') }}" required>
 
                                 @if ($errors->has('discount'))
                                 <span class="invalid-feedback">
