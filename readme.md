@@ -46,6 +46,7 @@ Live Demo at http://vouchercode.ml
 
   - You can access all the valid vouchers of an specific recipient accessing: http://vouchercode.ml/api/json/vouchers/[email] replacing the parameters and brackets to reasonable data.
 
+**Postman Collection:** (https://www.getpostman.com/collections/f52821927a236874e20b)
 
 ## Database Schema
 
